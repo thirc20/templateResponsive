@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 1%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1vh 0 1vh 80vw;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+    nav{
+        padding: 1vh 0 1vh 78vw;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    nav{
+        padding: 1vh 0 1vh 75vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav{
+        padding: 1vh 0 1vh 72vw;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    nav{
+        padding: 1vh 0 1vh 62vw;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .menu-toggle {
+        display: none;
+    }
+    nav {
+        padding: 0;
+
+    }
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #555;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #888;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
